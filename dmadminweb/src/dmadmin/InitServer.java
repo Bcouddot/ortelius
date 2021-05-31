@@ -519,7 +519,7 @@ public class InitServer extends HttpServletBase
      if (dbtype == 0) {
     	 // Postgres
 
-    	 st.execute("ALTER USER " + dUserName.toString() + " SET search_path TO dm,public;");
+    	 st.execute("ALTER USER \"" + dUserName.toString() + "\" SET search_path TO dm,public;");
      } else {
     	 // Oracle
     	 st.execute("ALTER SESSION set current_schema=dm");
